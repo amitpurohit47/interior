@@ -1,0 +1,447 @@
+@font-face {
+    font-family: Brandon;
+    src: url(../assets/fonts/brandon-grotesque-light-58a8a4b38001d.otf);
+}
+
+@font-face {
+    font-family: Proxima;
+    src: url(../assets/fonts/Proxima\ Nova\ Font.otf);
+}
+
+@font-face {
+    font-family: Noto;
+    src: url(../assets/fonts/NotoSerif-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.landing video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.landing-main {
+  position: absolute;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.landing-main-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-main h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  font-family: Proxima;
+  letter-spacing: 0.6rem;
+}
+
+.landing-main a {
+  text-decoration: none;
+  font-style: italic;
+  border-bottom: 1px solid white;
+  color: white;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-family: Noto,serif;
+}
+
+nav {
+  height: 100vh;
+  position: fixed;
+  width: 9rem;
+  background-color: #4f6d5b;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  z-index: 999;
+}
+
+nav .ham {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 10%;
+}
+
+nav .ham-main {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+nav .ham-bar1 {
+  height: 1px;
+  width: 100%;
+  margin-bottom: 7px;
+  background: white;
+}
+
+nav .ham-bar2 {
+  height: 1px;
+  width: 70%;
+  margin-bottom: 7px;
+  background: white;
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+}
+
+nav .ham-bar2.ham-bar2-open {
+  transform: translateX(40%);
+}
+
+nav .logo-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+nav .logo-container img {
+  width: 100%;
+}
+
+header {
+  background-color: #4f6d5b;
+  height: 100vh;
+  position: fixed;
+  z-index: 998;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 15rem;
+  transform: translateX(-6rem);
+  transition: 100ms ease-in-out;
+  font-family: Proxima;
+}
+
+header.header-open {
+  transform: translateX(9rem);
+}
+
+header .header-container {
+  display: grid;
+  place-items: center;
+  height: 75%;
+}
+
+header .header-link {
+  text-decoration: none;
+  color: white;
+  padding: 2.5rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    -o-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateX(-2rem);
+}
+
+header .header-link.header-link-open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+header .header-link:hover {
+  opacity: 0.5;
+}
+
+header .header-link:nth-child(1) {
+  transition-delay: 0.08s;
+}
+
+header .header-link:nth-child(2) {
+  transition-delay: 0.16s;
+}
+
+header .header-link:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+header .header-link:nth-child(4) {
+  transition-delay: 0.32s;
+}
+
+header .header-link:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.about-landing {
+  width: calc(100% - 9rem);
+  height: 100vh;
+  background-image: url(../assets/images/aboutlanding4.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin-left: auto;
+}
+
+.about-landing-inner {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.about-landing-main {
+    width: 500px;
+    font-size: 2.8rem;
+    font-style: italic;
+    line-height: 1.3;
+    font-family: Noto,serif;
+}
+
+.about-landing-main p{
+    animation: fadeup .8s ease-in-out;
+}
+
+.about-landing-main span{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.about-founder{
+    background-color: #231f20;
+    min-height: 100vh;
+    display: flex;
+    width: calc(100% - 9rem);
+    margin-left: auto;
+}
+
+.about-founder-image{
+    width: 50%;
+    height: 100%;
+}
+
+.about-founder-content{
+    width: 50%;
+    height: 100%;
+    color: white;
+    padding-left: 3rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+}
+
+.about-founder-content h1{
+    font-size: 2.3rem;
+    letter-spacing: 0.6rem;
+    margin-bottom: 20px;
+    font-family: Proxima;
+}
+
+.about-founder-content h3{
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-family: Brandon;
+}
+
+.about-founder-content p{
+    font-size: 1.3rem;
+    font-family: Proxima;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.about-founder-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.contact{
+    height: 60vh;
+    width: calc(100% - 9rem);
+    background-color: #231f20;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 30px;
+    margin-left: auto;
+}
+
+.contact-main{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.contact h1{
+    letter-spacing: 0.6rem;
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+    font-family: Proxima;
+}
+
+.contact .contact-name{
+    margin-top: auto;
+}
+
+.contact>p{
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    font-style: italic;
+    font-family: Noto,serif;
+}
+
+.contact-main p{
+    font-size: 1.3rem;
+    font-family: Brandon;
+}
+
+.contact-main a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-family: Brandon;
+}
+
+.service-landing{
+    height: 100vh;
+    /* width: calc(100% - 9rem); */
+    width: 100%;
+    background-image: url(../assets/images/serviceslanding.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+}
+
+.service-landing-inner{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    place-items: center;
+}
+
+.service-landing-inner h1{
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 0.6rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    animation: fadeup 0.5s ease-in-out;
+    font-family: Proxima;
+}
+
+.service-main{
+    width: calc(100% - 9rem);
+    margin-left: auto;
+}
+
+.service-row{
+    width: 100%;
+    min-height: 30rem;
+    display: flex;
+}
+
+.service-img{
+    width: 50%;
+}
+
+.service-name{
+    width: 50%;
+    display: grid;
+    place-items: center;
+    letter-spacing: 00.6rem;
+    font-family: Brandon;
+}
+
+.service-row:nth-child(even){
+    flex-flow: row-reverse;
+}
+
+.service-row:nth-child(odd) .service-name{
+    background-color: #231f20;
+    color: white;
+}
+
+.service-row:nth-child(even) .service-name{
+    background-color: #b1c6d3;
+}
+
+.works-landing{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../assets/images/portfoliolanding.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.works-landing-inner{
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+}
+
+.works-landing-inner h1{
+    letter-spacing: 0.6rem;
+    font-size: 3rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    animation: fadeup 0.5s ease-in-out;
+    color: white;
+    font-family: Proxima;
+}
+
+.works-main{
+    width: calc(100% - 9rem);
+    margin-left: auto;
+    background-color: #b1c6d3;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work-row{
+    width: 33%;
+    height: 400px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+@keyframes fadeup {
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
