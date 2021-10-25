@@ -4,12 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Interior</title>
+    <style>
+      .loader {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background-color: #231f20;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+    </style>
+    <title>Services-Dazzle Interiors</title>
+    <meta name="description" content="Best Interior designers in Pune" />
+    <meta name="description" content="Best Interior Design in Pune" />
+    <meta name="description" content="Best Civil Works in Pune" />
+    <meta name="description" content="Best Kitchen Designs in Pune" />
+    <meta name="description" content="Best Waterproofing in Pune" />
+    <meta name="description" content="Best 3D walls in Pune" />
+    <meta name="description" content="Best 3D tiles in Pune" />
   </head>
   <body>
     <div class="loader"></div>
-    <div class="mobile-header">RAJESHREE DESIGN</div>
+    <div class="mobile-header">DAZZLE INTERIORS</div>
     <nav>
       <div class="ham">
         <div class="ham-main">
@@ -28,9 +47,11 @@
       <div class="header-container">
         <a href="./index.html" class="header-link">Home</a>
         <a href="./about.html" class="header-link">About</a>
-        <a href="./services.html" class="header-link services-active">Services</a>
+        <a href="./services.html" class="header-link services-active"
+          >Services</a
+        >
         <a href="./works.html" class="header-link">Portfolio</a>
-        <a href="./about.html#contact" class="header-link">Contact</a>
+        <a href="./contact.html" class="header-link">Contact</a>
       </div>
     </header>
 
@@ -41,7 +62,7 @@
     </div>
 
     <div class="service-main">
-      <div class="service-row">
+      <div class="service-row" data-aos="fade-up" >
         <img
           src="./assets/images/interior.jpeg"
           alt="service"
@@ -51,7 +72,7 @@
           <h1>INTERIOR</h1>
         </div>
       </div>
-      <div class="service-row">
+      <div class="service-row" data-aos="fade-up" >
         <img
           src="./assets/images/painting.jpg"
           alt="service"
@@ -61,7 +82,7 @@
           <h1>PAINTING</h1>
         </div>
       </div>
-      <div class="service-row">
+      <div class="service-row" data-aos="fade-up" >
         <img
           src="./assets/images/kitchen.jpg"
           alt="service"
@@ -71,7 +92,7 @@
           <h1>KITCHEN DESIGNS</h1>
         </div>
       </div>
-      <div class="service-row">
+      <div class="service-row" data-aos="fade-up" >
         <img
           src="./assets/images/waterproofing.jpg"
           alt="service"
@@ -81,7 +102,7 @@
           <h1>WATERPROOFING</h1>
         </div>
       </div>
-      <div class="service-row">
+      <div class="service-row" data-aos="fade-up" >
         <img
           src="./assets/images/consultation.jpg"
           alt="service"
@@ -91,7 +112,7 @@
           <h1>ONLINE CONSULTATION</h1>
         </div>
       </div>
-      <div class="service-row">
+      <div class="service-row" data-aos="fade-up" >
         <img
           src="./assets/images/civil.jpg"
           alt="service"
@@ -101,7 +122,7 @@
           <h1>CIVIL WORLS</h1>
         </div>
       </div>
-      <div class="service-row">
+      <div class="service-row" data-aos="fade-up" >
         <img
           src="./assets/images/electric.jpg"
           alt="service"
@@ -111,7 +132,7 @@
           <h1>ELECTRIC FITTINGS</h1>
         </div>
       </div>
-      <div class="service-row">
+      <div class="service-row" data-aos="fade-up" >
         <img
           src="./assets/images/3dwall.jpg"
           alt="service"
@@ -125,8 +146,8 @@
 
     <div class="contact">
       <h1>WANT TO START A PROJECT?</h1>
-      <p>Get In Touch</p>
-      <h1 class="contact-name">RAJESHREE DESIGN</h1>
+      <a href="./contact.html">Get In Touch</a>
+      <h1 class="contact-name">DAZZLE INTERIORS</h1>
       <div class="contact-main">
         <p class="phone">7499242885 |&nbsp;</p>
         <a href="mailto:rajeshree.design@gmail.com">
@@ -138,6 +159,10 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./js/main.js"></script>
   </body>
 </html>
